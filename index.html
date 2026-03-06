@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardápio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:white;
+color:#111;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+/* HEADER */
+
+header{
+background:#4169E1;
+color:white;
+padding:20px;
+font-size:30px;
+font-weight:bold;
+text-align:center;
+}
+
+/* MENU */
+
+nav{
+display:flex;
+justify-content:center;
+gap:40px;
+background:#2e52c2;
+padding:12px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* TITULO */
+
+.title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.title h1{
+color:#4169E1;
+font-size:40px;
+}
+
+/* CARDS */
+
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+width:250px;
+border:3px solid #4169E1;
+border-radius:10px;
+overflow:hidden;
+background:white;
+text-align:center;
+cursor:pointer;
+transition:0.25s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+height:150px;
+object-fit:cover;
+}
+
+.card h2{
+padding:20px;
+}
+
+/* SEÇÕES */
+
+.content{
+margin-top:40px;
+}
+
+.section{
+display:none;
+}
+
+.section.active{
+display:block;
+}
+
+.section h2{
+margin-bottom:20px;
+color:#4169E1;
+}
+
+ul{
+list-style:none;
+}
+
+li{
+padding:8px 0;
+border-bottom:1px solid #ddd;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:auto;
+background:#4169E1;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+Cardápio
+</header>
+
+<nav>
+<a href="#">Home</a>
+</nav>
+
+<div class="container">
+
+<div class="title">
+<h1>Nosso Cardápio</h1>
+<p>Escolha uma categoria</p>
+</div>
+
+<div class="cards">
+
+<div class="card" onclick="showSection('espetos')">
+<img src="espetos.jpg">
+<h2>Espetos</h2>
+</div>
+
+<div class="card" onclick="showSection('caldos')">
+<img src="caldos.jpg">
+<h2>Caldos</h2>
+</div>
+
+<div class="card" onclick="showSection('bebidas')">
+<img src="bebidas.jpg">
+<h2>Bebidas</h2>
+</div>
+
+<div class="card" onclick="showSection('doses')">
+<img src="doses.jpg">
+<h2>Doses</h2>
+</div>
+
+</div>
+
+<div class="content">
+
+<div id="espetos" class="section">
+
+<h2>Espetos</h2>
+
+<ul>
+<li>Carne</li>
+<li>Asa de Frango</li>
+<li>Calabresa</li>
+<li>Peito de Frango</li>
+<li>Coração de Frango</li>
+<li>Coração de Boi</li>
+<li>Língua</li>
+<li>Ubre</li>
+<li>Porco</li>
+<li>Carne Moída</li>
+<li>Costela de Carneiro</li>
+<li>Medalhão de Frango</li>
+<li>Costela de Porco</li>
+<li>Queijo de Coalho</li>
+<li>Ovo de Codorna</li>
+<li>Pão de Alho</li>
+<li>Pão de Alho Recheado</li>
+<li>Linguiça de Charque</li>
+<li>Picanha em Pedaço</li>
+</ul>
+
+</div>
+
+<div id="caldos" class="section">
+
+<h2>Caldos</h2>
+
+<ul>
+<li>Sopa Pequena</li>
+<li>Sopa Grande</li>
+<li>Caldo de Costela P</li>
+<li>Caldo de Costela G</li>
+<li>Caldo de Mocotó P</li>
+<li>Caldo de Mocotó G</li>
+</ul>
+
+</div>
+
+<div id="bebidas" class="section">
+
+<h2>Bebidas</h2>
+
+<ul>
+<li>Refrigerante 1L</li>
+<li>Refrigerante Lata</li>
+<li>Suco</li>
+<li>Red Bull</li>
+<li>Água com Gás</li>
+<li>Água Mineral</li>
+<li>Água de Coco</li>
+<li>Cerveja Budweiser</li>
+<li>Cerveja Heineken</li>
+<li>Cerveja Spaten</li>
+<li>Cerveja Brahma</li>
+<li>Cerveja Bohemia</li>
+</ul>
+
+</div>
+
+<div id="doses" class="section">
+
+<h2>Doses e Cachaças</h2>
+
+<ul>
+<li>Red Label</li>
+<li>Black & White</li>
+<li>Campari</li>
+<li>Martini</li>
+<li>Rum Montilla</li>
+<li>Drer</li>
+<li>Cachaça Serra do Mel</li>
+<li>Cachaça Sensação do Brejo</li>
+<li>Cachaça Budega</li>
+<li>Cachaça Ypióca</li>
+<li>Cachaça Caranguejo</li>
+<li>Cachaça Pitu</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026
+</footer>
+
+<script>
+
+function showSection(id){
+
+document.querySelectorAll(".section").forEach(sec=>{
+sec.classList.remove("active")
+})
+
+document.getElementById(id).classList.add("active")
+
+window.scrollTo({
+top:document.querySelector(".content").offsetTop,
+behavior:"smooth"
+})
+
+}
+
+</script>
+
+</body>
+</html>
